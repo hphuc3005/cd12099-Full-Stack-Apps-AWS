@@ -1,0 +1,108 @@
+(.ebcli-virtual-env) E:\Studies\Udacity\AWS Dev\cd12099-Full-Stack-Apps-AWS\project starter code>eb init
+
+Select a default region
+1) us-east-1 : US East (N. Virginia)
+2) us-west-1 : US West (N. California)
+3) us-west-2 : US West (Oregon)
+4) eu-west-1 : EU (Ireland)
+5) eu-central-1 : EU (Frankfurt)
+6) ap-south-1 : Asia Pacific (Mumbai)
+7) ap-southeast-1 : Asia Pacific (Singapore)
+8) ap-southeast-2 : Asia Pacific (Sydney)
+9) ap-northeast-1 : Asia Pacific (Tokyo)
+10) ap-northeast-2 : Asia Pacific (Seoul)
+11) sa-east-1 : South America (Sao Paulo)
+12) cn-north-1 : China (Beijing)
+13) cn-northwest-1 : China (Ningxia)
+14) us-east-2 : US East (Ohio)
+15) ca-central-1 : Canada (Central)
+16) eu-west-2 : EU (London)
+17) eu-west-3 : EU (Paris)
+18) eu-north-1 : EU (Stockholm)
+19) eu-south-1 : EU (Milano)
+20) ap-east-1 : Asia Pacific (Hong Kong)
+21) me-south-1 : Middle East (Bahrain)
+22) il-central-1 : Middle East (Israel)
+23) af-south-1 : Africa (Cape Town)
+24) ap-southeast-3 : Asia Pacific (Jakarta)
+25) ap-northeast-3 : Asia Pacific (Osaka)
+(default is 3): 1
+
+
+Enter Application Name
+(default is "project starter code"): project2
+Application project2 has been created.
+
+It appears you are using Node.js. Is this correct?
+(Y/n): y
+Select a platform branch.
+1) Node.js 20 running on 64bit Amazon Linux 2023
+2) Node.js 18 running on 64bit Amazon Linux 2023
+3) Node.js 18 running on 64bit Amazon Linux 2
+4) Node.js 16 running on 64bit Amazon Linux 2 (Deprecated)
+5) Node.js 14 running on 64bit Amazon Linux 2 (Deprecated)
+(default is 1):
+
+Cannot setup CodeCommit because there is no Source Control setup, continuing with initialization
+Do you want to set up SSH for your instances?
+(Y/n): n
+
+(.ebcli-virtual-env) E:\Studies\Udacity\AWS Dev\cd12099-Full-Stack-Apps-AWS\project starter code>eb create
+Enter Environment Name
+(default is project2-dev):
+Enter DNS CNAME prefix
+(default is project2-dev):
+
+Select a load balancer type
+1) classic
+2) application
+3) network
+(default is 2):
+
+
+Would you like to enable Spot Fleet requests for this environment? (y/N): n
+
+2.0+ Platforms require a service role. We will attempt to create one for you. You can specify your own role using the --service-role option.
+Type "view" to see the policy, or just press ENTER to continue:
+Creating application version archive "app-240407_222237222580".
+Uploading: [##################################################] 100% Done...
+Environment details for: project2-dev
+  Application name: project2
+  Region: us-east-1
+  Deployed Version: app-240407_222237222580
+  Environment ID: e-5cnppjehm2
+  Platform: arn:aws:elasticbeanstalk:us-east-1::platform/Node.js 20 running on 64bit Amazon Linux 2023/6.1.2
+  Tier: WebServer-Standard-1.0
+  CNAME: project2-dev.us-east-1.elasticbeanstalk.com
+  Updated: 2024-04-07 15:23:28.041000+00:00
+Printing Status:
+2024-04-07 15:23:26    INFO    createEnvironment is starting.
+2024-04-07 15:23:28    INFO    Using elasticbeanstalk-us-east-1-089264262870 as Amazon S3 storage bucket for environment data.
+2024-04-07 15:23:54    INFO    Created security group named: sg-0d8d24409672c0297
+2024-04-07 15:23:54    INFO    Created security group named: awseb-e-5cnppjehm2-stack-AWSEBSecurityGroup-zwCw0r7TRJFq
+2024-04-07 15:23:54    INFO    Created Auto Scaling launch configuration named: awseb-e-5cnppjehm2-stack-AWSEBAutoScalingLaunchConfiguration-cCS4oYQlQ6TV
+2024-04-07 15:24:10    INFO    Created target group named: arn:aws:elasticloadbalancing:us-east-1:089264262870:targetgroup/awseb-AWSEB-KBADOXPC7C1L/da3f906fd8ba2a14
+2024-04-07 15:24:41    INFO    Created CloudWatch alarm named: awseb-e-5cnppjehm2-stack-AWSEBCloudwatchAlarmHigh-je8MWSsOLEnO
+2024-04-07 15:24:41    INFO    Created CloudWatch alarm named: awseb-e-5cnppjehm2-stack-AWSEBCloudwatchAlarmLow-sIYXP4dscszh
+2024-04-07 15:24:41    INFO    Created Auto Scaling group policy named: arn:aws:autoscaling:us-east-1:089264262870:scalingPolicy:7cc26998-d36a-4bc5-b815-1cdcc3cbe9da:autoScalingGroupName/awseb-e-5cnppjehm2-stack-AWSEBAutoScalingGroup-QSeTKsU4X6FI:policyName/awseb-e-5cnppjehm2-stack-AWSEBAutoScalingScaleUpPolicy-47xMiLwU4Mxe
+2024-04-07 15:24:41    INFO    Created Auto Scaling group policy named: arn:aws:autoscaling:us-east-1:089264262870:scalingPolicy:2b2c4d56-8def-4b34-b169-5d49ae568bee:autoScalingGroupName/awseb-e-5cnppjehm2-stack-AWSEBAutoScalingGroup-QSeTKsU4X6FI:policyName/awseb-e-5cnppjehm2-stack-AWSEBAutoScalingScaleDownPolicy-JkK1gILtf7Ig
+2024-04-07 15:24:41    INFO    Created Auto Scaling group named: awseb-e-5cnppjehm2-stack-AWSEBAutoScalingGroup-QSeTKsU4X6FI
+2024-04-07 15:24:41    INFO    Waiting for EC2 instances to launch. This may take a few minutes.
+2024-04-07 15:27:02    INFO    Created load balancer named: arn:aws:elasticloadbalancing:us-east-1:089264262870:loadbalancer/app/awseb--AWSEB-w5Vr7hH6j6bQ/f3dbb5a848faff5e
+2024-04-07 15:27:02    INFO    Created Load Balancer listener named: arn:aws:elasticloadbalancing:us-east-1:089264262870:listener/app/awseb--AWSEB-w5Vr7hH6j6bQ/f3dbb5a848faff5e/bbaeb8e8dec7c204
+2024-04-07 15:27:11    INFO    Instance deployment completed successfully.
+2024-04-07 15:27:25    INFO    Application available at project2-dev.us-east-1.elasticbeanstalk.com.
+2024-04-07 15:27:26    INFO    Successfully launched environment: project2-dev
+
+
+(.ebcli-virtual-env) E:\Studies\Udacity\AWS Dev\cd12099-Full-Stack-Apps-AWS\project starter code>eb deploy
+Creating application version archive "app-240407_223134076152".
+Uploading: [##################################################] 100% Done...
+2024-04-07 15:32:13    INFO    Environment update is starting.
+2024-04-07 15:32:17    INFO    Deploying new version to instance(s).
+2024-04-07 15:32:27    INFO    Instance deployment completed successfully.
+2024-04-07 15:32:34    INFO    New application version was deployed to running EC2 instances.
+2024-04-07 15:32:34    INFO    Environment update completed successfully.
+
+
+(.ebcli-virtual-env) E:\Studies\Udacity\AWS Dev\cd12099-Full-Stack-Apps-AWS\project starter code>
